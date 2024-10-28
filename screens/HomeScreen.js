@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { View, Image, SafeAreaView, TextInput, TouchableOpacity, Text } from "react-native";
+import { View, Image, SafeAreaView, TextInput, TouchableOpacity, Text, ScrollView } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import {MagnifyingGlassIcon} from 'react-native-heroicons/outline';
-import {MapPinIcon} from 'react-native-heroicons/solid';
+import {MapPinIcon, CalendarDaysIcon} from 'react-native-heroicons/solid';
 
 
 
@@ -83,9 +83,58 @@ export default function HomeScreen(){
                          {/* Altri dati */}
                          <View style={{flexDirection: 'row', justifyContent: 'space-between', marginLeft: 16, marginRight: 16}}>
                             <View style={{flexDirection: 'row', marginLeft: 2, alignItems: 'center'}}>
-
+                                <Image source={require('../assets/wind.png')} style={{height: 28, width: 28}}/>
+                                <Text style={{color: 'white', fontWeight: 'semibold', fontSize: 16, lineHeight: 24, marginLeft: 6}}>22 km</Text>
                             </View>
+                            <View style={{flexDirection: 'row', marginLeft: 2, alignItems: 'center'}}>
+                                <Image source={require('../assets/humidity.png')} style={{height: 28, width: 28}}/>
+                                <Text style={{color: 'white', fontWeight: 'semibold', fontSize: 16, lineHeight: 24, marginLeft: 6}}>24%</Text>
+                            </View>
+                            <View style={{flexDirection: 'row', marginLeft: 2, alignItems: 'center'}}>
+                                <Image source={require('../assets/alba.png')} style={{height: 28, width: 28}}/>
+                                <Text style={{color: 'white', fontWeight: 'semibold', fontSize: 16, lineHeight: 24, marginLeft: 6}}>6:05 AM</Text>
+                            </View> 
                          </View>
+                </View>
+                {/* previsione per i prossimi giorni */}
+                <View style={{marginBottom: 8, marginTop: 12}}>
+                    <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20, marginRight: 20, marginLeft: 8}}>
+                        <CalendarDaysIcon size={22} color={'white'}/>
+                        <Text style={{color: 'white', fontSize: 16, lineHeight: 24, marginLeft: 6}}>Previsione giornaliera</Text>
+                    </View>
+                    <ScrollView horizontal contentContainerStyle={{paddingHorizontal: 15}} showsHorizontalScrollIndicator={false}>
+                        <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 96, borderRadius: 24, paddingBottom: 12, paddingTop: 12, marginTop: 4, marginRight: 16, backgroundColor: 'rgba(255, 255,255, 0.15)'}}>
+                            <Image source={require('../assets/heavyrain.png')} style={{height: 44, width: 44}} />
+                            <Text style={{color: 'white', marginTop: 8}}>Lunedì</Text>
+                            <Text style={{color: 'white', fontSize: 20, lineHeight: 20, fontWeight: 'semibold', marginTop: 6}}>13&#176;</Text>
+                        </View>
+                        <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 96, borderRadius: 24, paddingBottom: 12, paddingTop: 12, marginTop: 4, marginRight: 16, backgroundColor: 'rgba(255, 255,255, 0.15)'}}>
+                            <Image source={require('../assets/heavyrain.png')} style={{height: 44, width: 44}} />
+                            <Text style={{color: 'white', marginTop: 8}}>Martedì</Text>
+                            <Text style={{color: 'white', fontSize: 20, lineHeight: 20, fontWeight: 'semibold', marginTop: 6}}>13&#176;</Text>
+                        </View>
+                        <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 96, borderRadius: 24, paddingBottom: 12, paddingTop: 12, marginTop: 4, marginRight: 16, backgroundColor: 'rgba(255, 255,255, 0.15)'}}>
+                            <Image source={require('../assets/heavyrain.png')} style={{height: 44, width: 44}} />
+                            <Text style={{color: 'white', marginTop: 8}}>Mercoledì</Text>
+                            <Text style={{color: 'white', fontSize: 20, lineHeight: 20, fontWeight: 'semibold', marginTop: 6}}>13&#176;</Text>
+                        </View>
+                        <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 96, borderRadius: 24, paddingBottom: 12, paddingTop: 12, marginTop: 4, marginRight: 16, backgroundColor: 'rgba(255, 255,255, 0.15)'}}>
+                            <Image source={require('../assets/heavyrain.png')} style={{height: 44, width: 44}} />
+                            <Text style={{color: 'white', marginTop: 8}}>Giovedì</Text>
+                            <Text style={{color: 'white', fontSize: 20, lineHeight: 20, fontWeight: 'semibold', marginTop: 6}}>13&#176;</Text>
+                        </View>
+                        <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 96, borderRadius: 24, paddingBottom: 12, paddingTop: 12, marginTop: 4, marginRight: 16, backgroundColor: 'rgba(255, 255,255, 0.15)'}}>
+                            <Image source={require('../assets/heavyrain.png')} style={{height: 44, width: 44}} />
+                            <Text style={{color: 'white', marginTop: 8}}>Venerdì</Text>
+                            <Text style={{color: 'white', fontSize: 20, lineHeight: 20, fontWeight: 'semibold', marginTop: 6}}>13&#176;</Text>
+                        </View>
+                        <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 96, borderRadius: 24, paddingBottom: 12, paddingTop: 12, marginTop: 4, marginRight: 16, backgroundColor: 'rgba(255, 255,255, 0.15)'}}>
+                            <Image source={require('../assets/heavyrain.png')} style={{height: 44, width: 44}} />
+                            <Text style={{color: 'white', marginTop: 8}}>Sabato</Text>
+                            <Text style={{color: 'white', fontSize: 20, lineHeight: 20, fontWeight: 'semibold', marginTop: 6}}>13&#176;</Text>
+                        </View>
+                        
+                    </ScrollView>
                 </View>
             </SafeAreaView>
         </View>
