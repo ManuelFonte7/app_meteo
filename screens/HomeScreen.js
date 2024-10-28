@@ -60,6 +60,33 @@ export default function HomeScreen(){
                         }
 
                 </View>
+                {/* Sezione previsioni */}
+                <View style={{marginLeft: 16, marginRight: 16, display: 'flex', justifyContent: 'space-around', flex: 1, marginBottom: 8}}>
+
+                        {/* Luoghi */}
+                        <Text style={{color: 'white', textAlign: 'center', fontSize: 24, lineHeight: 32, fontWeight: 'bold'}}>
+                            London,
+                            <Text style={{fontWeight: 'semibold', fontSize: 18, lineHeight: 28, color: 'gray'}}>United Kingdom</Text>
+                        </Text>
+
+                         {/* Immagine meteo */}
+                         <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                            <Image source={require('../assets/nuvoloso.png')} style={{width: 208, height: 208}}/>
+                         </View>
+
+                         {/* Gradi */}
+                         <View style={{marginTop: 8}}>
+                            <Text style={{textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: 60, marginLeft: 20}}>23&#176;</Text>
+                            <Text style={{textAlign: 'center', color: 'white', lineHeight: 28, fontSize: 20, marginLeft: 20, letterSpacing: 0.1}}>Parzialmente nuvoloso</Text>
+                         </View>
+
+                         {/* Altri dati */}
+                         <View style={{flexDirection: 'row', justifyContent: 'space-between', marginLeft: 16, marginRight: 16}}>
+                            <View style={{flexDirection: 'row', marginLeft: 2, alignItems: 'center'}}>
+
+                            </View>
+                         </View>
+                </View>
             </SafeAreaView>
         </View>
     )
